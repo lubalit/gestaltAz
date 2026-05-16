@@ -148,8 +148,8 @@ useEffect(() => setMounted(true), [])
   const langs: Lang[] = ['ru', 'az', 'en', 'es']
 
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center px-2 py-4 sm:p-8" style={{ background: '#dff0f7' }}>
-      {mounted && <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />}
+    <main className="relative min-h-screen flex flex-col items-center justify-center px-2 py-4 sm:p-8">
+      {mounted && <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }} />}
 
       {/* Language switcher */}
       <div className="relative z-10 flex gap-2 mb-6">
