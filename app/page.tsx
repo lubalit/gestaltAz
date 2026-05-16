@@ -148,7 +148,7 @@ useEffect(() => setMounted(true), [])
   const langs: Lang[] = ['ru', 'az', 'en', 'es']
 
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center p-8" style={{ background: '#dff0f7' }}>
+    <main className="relative min-h-screen flex flex-col items-center justify-center px-2 py-4 sm:p-8" style={{ background: '#dff0f7' }}>
       {mounted && <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />}
 
       {/* Language switcher */}
@@ -174,14 +174,14 @@ useEffect(() => setMounted(true), [])
 
       {/* Card */}
       <div
-        className="relative z-10 w-full max-w-2xl rounded-3xl px-14 py-12"
+        className="relative z-10 w-full max-w-2xl rounded-3xl px-4 py-6 sm:px-14 sm:py-12"
         style={{
           background: 'rgba(255,255,255,0.72)',
           backdropFilter: 'blur(18px)',
           border: '1px solid rgba(255,255,255,0.8)',
         }}
       >
-        <h1 className="text-center mb-5" style={{ fontFamily: 'Nunito, sans-serif', fontSize: '52px', fontWeight: 300, color: '#0d1b2e', letterSpacing: '-0.01em', lineHeight: 1 }}>
+        <h1 className="text-center mb-5" style={{ fontFamily: 'Nunito, sans-serif', fontSize: 'clamp(34px, 10vw, 52px)', fontWeight: 300, color: '#0d1b2e', letterSpacing: '-0.01em', lineHeight: 1 }}>
           Gestalt.az
         </h1>
 
