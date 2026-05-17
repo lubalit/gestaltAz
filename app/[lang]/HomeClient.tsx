@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/navigation'
 
 const content = {
   ru: {
@@ -66,10 +67,8 @@ interface Bubble {
   speed: number
 }
 
-export default function Home() {
-  const [lang, setLang] = useState<Lang>('ru')
-  const [mounted, setMounted] = useState(false)
-useEffect(() => setMounted(true), [])
+export default function HomeClient({ lang }: { lang: Lang }) {
+  const router = useRouter()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const bubblesRef = useRef<Bubble[]>([])
   const frameRef = useRef<number>(0)
@@ -142,21 +141,21 @@ useEffect(() => setMounted(true), [])
       window.removeEventListener('resize', resize)
       cancelAnimationFrame(frameRef.current)
     }
-  }, [mounted])
+  }, [])
 
   const d = content[lang]
   const langs: Lang[] = ['ru', 'az', 'en', 'es']
 
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center px-2 py-4 sm:p-8">
-      {mounted && <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }} />}
+      <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }} />
 
       {/* Language switcher */}
       <div className="relative z-10 flex gap-2 mb-6">
         {langs.map((l) => (
           <button
             key={l}
-            onClick={() => setLang(l)}
+            onClick={() => router.push(`/${l}`)}
             className="text-xs font-semibold tracking-widest px-4 py-1.5 rounded-full border-[1.5px] transition-all duration-200 backdrop-blur-sm"
             style={{
               fontFamily: 'Nunito, sans-serif',
