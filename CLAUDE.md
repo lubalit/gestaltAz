@@ -150,6 +150,14 @@
 
 ---
 
+## Workflow разработки
+
+- **Локально:** `localhost:3000` — здесь пишем и проверяем
+- **Продакшен:** `gestalt.az` — пуш в `main` → автодеплой через Digital Ocean
+- **Staging:** нет, добавим позже когда появятся реальные пользователи
+
+---
+
 ## Принятые решения
 - Деплой: Digital Ocean App Platform (не Vercel, не Droplet)
 - CMS: Payload CMS (не Sanity, не Strapi) — нативный для Next.js
