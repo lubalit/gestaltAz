@@ -128,10 +128,10 @@
 - [x] Деплой на Digital Ocean App Platform
 - [x] Домен gestalt.az подключён, SSL автоматический
 - [x] Google Analytics подключён
+- [x] Яндекс Метрика подключена
 - [x] Шрифт Nunito
 
 ### 🔄 В процессе
-- [ ] Яндекс Метрика
 - [ ] Favicon (зелёно-голубой кружок SVG)
 - [ ] Редиректы geshtalt.az и gestalt-therapy.az → gestalt.az
 - [ ] Title в браузере (проверить что "Gestalt.az" отображается)
