@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
         destination: 'https://gestalt.az/:path*',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'gestalt-therapy.az' }],
+        destination: 'https://gestalt.az/:path*',
+        permanent: true,
+      },
     ]
   },
 };
