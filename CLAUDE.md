@@ -19,7 +19,7 @@
 - **Репозиторий:** https://github.com/lubalit/gestaltAz
 - **Языки:** RU, AZ, EN, ES (i18n routing: gestalt.az/ru, /az, /en, /es)
 - **Шрифт:** Nunito (Google Fonts, поддерживает кириллицу + латиницу)
-- **Аналитика:** Google Analytics G-2X3X4QHW2G, Яндекс Метрика (в процессе)
+- **Аналитика:** Google Analytics G-2X3X4QHW2G, Яндекс Метрика 109372694
 
 ---
 
